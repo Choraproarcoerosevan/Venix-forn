@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0812">
+  <title>VENIX — Loja Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">✦ VENIX STORE · Ofertas e novidades toda semana</div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Venix início"><span class="brand-mark">V</span><span>VENIX<span class="brand-dot">.</span></span></a>
+    <nav><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrinho">Carrinho <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse"></span> SUA LOJA DIGITAL</span>
+        <h1>Encontre. Escolha.<br><span>É seu.</span></h1>
+        <p>Produtos selecionados, atendimento direto e uma experiência de compra simples. Bem-vindo à VENIX.</p>
+        <div class="hero-actions"><a class="primary-button" href="#produtos">Explorar produtos <span>↗</span></a><a class="text-link" href="#contato">Fale com a gente</a></div>
+        <div class="hero-stats"><div><strong>100%</strong><small>Atendimento direto</small></div><div><strong>Pix</strong><small>Pagamento combinado</small></div><div><strong>Vários</strong><small>Tipos de produto</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="Arte decorativa roxa">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="hero-card">
+          <div class="mini-label">VENIX / SELEÇÃO</div><div class="cube">V</div><div class="hero-card-bottom"><span>DROP<br><b>001</b></span><span class="card-arrow">↗</span></div>
+        </div><div class="floating-tag tag-top">NOVAS OFERTAS ✦</div><div class="floating-tag tag-bottom">SIMPLES. RÁPIDO. VENIX.</div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><span>✦ Produtos variados</span><span>✦ Compra pelo carrinho</span><span>✦ Finalize pelo Discord</span><span>✦ Pix combinado com a loja</span></section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-heading"><div><span class="eyebrow">CATÁLOGO</span><h2>Escolha seu próximo <span>achado.</span></h2></div><p>Adicione ao carrinho e envie seu pedido pelo Discord.</p></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Games">Games</button><button class="filter" data-filter="Acessórios">Acessórios</button><button class="filter" data-filter="Digital">Digital</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="demo-note">Os produtos e preços exibidos são exemplos editáveis. Confirme estoque e preço com a loja antes de pagar.</p>
+    </section>
+
+    <section class="promo" id="sobre"><div class="promo-icon">✦</div><div><span class="eyebrow">POR QUE VENIX?</span><h2>Comprar sem complicação.</h2><p>Escolha seus produtos, revise o carrinho e fale com a gente para confirmar os detalhes do pedido.</p></div><a class="secondary-button" href="#contato">Conhecer a loja ↗</a></section>
+
+    <section class="contact-section" id="contato"><div><span class="eyebrow">VAMOS CONVERSAR</span><h2>Seu pedido começa <span>aqui.</span></h2><p>Finalize pelo Discord e combine o pagamento via Pix após confirmar os detalhes.</p></div><div class="contact-card"><div class="contact-symbol">◈</div><div><b>Atendimento VENIX</b><small>Pedidos e dúvidas</small></div><a id="discordLink" href="#" target="_blank" rel="noopener">Abrir Discord ↗</a></div></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">V</span><span>VENIX<span class="brand-dot">.</span></span></a><span>© <span id="year"></span> VENIX Store. Feito para comprar melhor.</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Voltar ao topo ↑</a></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">SEU PEDIDO</span><h2>Carrinho</h2></div><button id="closeCart" class="close-button" aria-label="Fechar carrinho">×</button></div>
+    <div id="cartItems" class="cart-items"><div class="empty-cart">Seu carrinho está vazio.<br><span>Adicione algo que você curtiu.</span></div></div>
+    <div class="drawer-bottom"><div class="total-row"><span>Total estimado</span><strong id="cartTotal">R$ 0,00</strong></div><small>O valor final e a disponibilidade serão confirmados pelo atendimento.</small><button id="checkout" class="primary-button full">Enviar pedido pelo Discord ↗</button><button id="copyOrder" class="secondary-button full">Copiar resumo do pedido</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
